@@ -1,0 +1,94 @@
+\documentclass[a4paper,11pt]{article}
+
+% === Encoding & Fonts ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% === Language (switch as needed) ===
+% For Japanese: uncomment below and use lualatex
+% \usepackage{luatexja}
+% \usepackage[hiragino-pron]{luatexja-preset}
+
+% === Layout ===
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% === Section styling ===
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% === Lists, Tables, Graphics ===
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{float}
+
+% === Code listings ===
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+}
+
+% === Hyperlinks & Colors ===
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,urlcolor=RoyalBlue,citecolor=OliveGreen]{hyperref}
+
+% === Bibliography ===
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+% \addbibresource{references.bib}
+
+% === Header/Footer ===
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small\leftmark}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% === Meta ===
+\title{REPORT\_TITLE}
+\author{REPORT\_AUTHOR}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+REPORT\_ABSTRACT
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% === Content starts here ===
+
+\section{Introduction}
+SECTION\_CONTENT
+
+\section{Background}
+SECTION\_CONTENT
+
+\section{Findings}
+SECTION\_CONTENT
+
+\section{Analysis}
+SECTION\_CONTENT
+
+\section{Conclusion}
+SECTION\_CONTENT
+
+% === References ===
+% \printbibliography
+
+\end{document}
